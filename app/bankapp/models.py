@@ -55,7 +55,21 @@ class Customer(models.Model):
             ('savings', 'SAVINGS')
             ('none', 'NONE')
     )
+        account_params = models.CharField(
+            max_length =8,
+            choices = account_types,
+            default = account_types[0]
+    )
 
-    
+    account_balance = models.FloatField(max_length=500, default='0.00')
+
+    connect_to_customer = models.OneToOneField(Client,
+    on_delete = models.CASCADE
+    )
+
+    def_str_(self):
+        return(
+            f"{self.connect_to_client_name} Balance :{self.account_balance}"
+        )
 
     
