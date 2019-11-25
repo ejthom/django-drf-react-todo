@@ -1,1 +1,1 @@
-web: cd app && python manage.py migrate && guicorn main.wisgi
+web: cd app && python manage.py migrate && guicorn main.wsgi
