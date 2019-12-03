@@ -1,22 +1,5 @@
-from django.contrib.auth.models import User, Group, Branch, Account
+from django.contrib.auth.models import User, Group
 from rest_framework import serializers
-
-class AccountSerializer(serializers.HyperlinkedModelSerializer):
-    class Meta:
-        model = Account
-        fields = [
-            'url',
-            'name',
-            'type'
-        ]
-
-class BranchSerializer(serializers.HyperlinkedModelSerializer):
-    class Meta:
-        model = Branch
-        fields = [
-            'url',
-            'location'
-        ] 
 
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):

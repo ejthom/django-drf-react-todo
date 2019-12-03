@@ -20,10 +20,8 @@ from rest_framework import routers
 from bankapp import views as bankapp_views
     
 router = routers.DefaultRouter()
-router.register(r'users', bankapp_views.User_Viewset)
+router.register(r'users', bankapp_views.User_Viewset),
 router.register(r'groups', bankapp_views.Group_Viewset)
-router.register(r'branch', bankapp_views.Branch_Viewset)
-router.register(r'account', bankapp_views.Account_Viewset)
 
 
 urlpatterns = [
